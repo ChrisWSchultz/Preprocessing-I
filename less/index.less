@@ -113,6 +113,10 @@ main {
 		background-color: @back-color;
 		.default-m-p();
 		.flex-row();
+
+		h1, h2, h3, p {
+			.default-m-p();
+		}
 	}
 
 	.details {
@@ -135,5 +139,10 @@ main {
 	.contact {
 		.default-m-p();
 		background-color: @back-color;
+
+		h2, p {
+			padding: 1%;
+		}
+
 	}
 }
