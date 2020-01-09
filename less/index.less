@@ -107,6 +107,10 @@ main {
 				color: @link-hover;
 			}
 		}
+
+		@media ( max-width: 500px) {
+			flex-direction: column;
+		}
 	}
 
 	.intro {
@@ -116,6 +120,20 @@ main {
 
 		h1, h2, h3, p {
 			.default-m-p();
+		}
+
+		@media ( max-width: 1100px){
+			img {
+				width: 33vw;
+			}
+		}
+
+		@media ( max-width: 500px) {
+			flex-direction: column;
+
+			img {
+				width: 100%;
+			}
 		}
 	}
 
@@ -134,6 +152,10 @@ main {
 		.work {
 			width: 45%;
 			.default-m-p();
+		}
+
+		@media ( max-width: 500px) {
+			flex-direction: column;
 		}
 	}
 	.contact {

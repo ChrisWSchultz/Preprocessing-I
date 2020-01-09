@@ -173,6 +173,11 @@ main header a {
 main header a:hover {
   color: #BF7E04;
 }
+@media (max-width: 500px) {
+  main header {
+    flex-direction: column;
+  }
+}
 main .intro {
   background-color: #A6A6A6;
   margin: 1%;
@@ -186,6 +191,19 @@ main .intro h3,
 main .intro p {
   margin: 1%;
   padding: 2%;
+}
+@media (max-width: 1100px) {
+  main .intro img {
+    width: 33vw;
+  }
+}
+@media (max-width: 500px) {
+  main .intro {
+    flex-direction: column;
+  }
+  main .intro img {
+    width: 100%;
+  }
 }
 main .details {
   display: flex;
@@ -203,6 +221,11 @@ main .details .work {
   width: 45%;
   margin: 1%;
   padding: 2%;
+}
+@media (max-width: 500px) {
+  main .details {
+    flex-direction: column;
+  }
 }
 main .contact {
   margin: 1%;
