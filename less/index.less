@@ -57,3 +57,114 @@ html, body {
     height: 100%;
 }
 
+html {
+	font-size: 62.5%;
+}
+
+@text-color: #260F01;
+@link-hover: #BF7E04;
+@back-color: #A6A6A6;
+
+.flex-row(@display: flex, @justify: space-around) {
+	display: @display;
+	justify-content: @justify;
+}
+
+.default-m-p {
+	margin: 1%;
+	padding: 2%;
+}
+
+main {
+	color: @text-color;
+	font-size: 1.6rem;
+	width: 100%;
+	.flex-row(flex, center);
+	flex-direction: column;
+	.default-m-p;
+
+	h1 {
+		font-size: 4rem;
+	}
+	h2 {
+		font-size: 3rem;
+	}
+	h3 {
+		font-size: 2rem;
+	}
+
+	header {
+
+		nav {
+			.flex-row(flex, flex-end);
+		}
+		a {
+			text-decoration: none;
+			color: @text-color;
+			.default-m-p();
+
+			&:hover {
+				color: @link-hover;
+			}
+		}
+
+		@media ( max-width: 500px) {
+			flex-direction: column;
+		}
+	}
+
+	.intro {
+		background-color: @back-color;
+		.default-m-p();
+		.flex-row();
+
+		h1, h2, h3, p {
+			.default-m-p();
+		}
+
+		@media ( max-width: 1100px){
+			img {
+				width: 33vw;
+			}
+		}
+
+		@media ( max-width: 500px) {
+			flex-direction: column;
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+	.details {
+		.flex-row();
+
+		li {
+			padding-left: 5%;
+		}
+
+		.skills {
+			width: 45%;
+			.default-m-p();
+		}
+
+		.work {
+			width: 45%;
+			.default-m-p();
+		}
+
+		@media ( max-width: 500px) {
+			flex-direction: column;
+		}
+	}
+	.contact {
+		.default-m-p();
+		background-color: @back-color;
+
+		h2, p {
+			padding: 1%;
+		}
+
+	}
+}
